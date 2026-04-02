@@ -1,0 +1,19 @@
+{
+  "functions": {
+    "*.php": {
+      "runtime": "vercel-php@0.7.2"
+    }
+  },
+  "routes": [
+    { "src": "/login",        "dest": "/login.php" },
+    { "src": "/register",     "dest": "/register.php" },
+    { "src": "/admin",        "dest": "/admin.php" },
+    { "src": "/dashboard",    "dest": "/dashboard.php" },
+    { "src": "/setup",        "dest": "/setup.php" },
+    { "src": "/logout",       "dest": "/logout.php" },
+    { "src": "/admin_action", "dest": "/admin_action.php" },
+    { "src": "/(.*\\.php)",   "dest": "/$1" },
+    { "src": "/",             "dest": "/index.php" },
+    { "src": "/(.*)",         "dest": "/$1" }
+  ]
+}
